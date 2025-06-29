@@ -15,14 +15,13 @@ public protocol Defaultable {
 
 public extension Optional where Wrapped: Defaultable {
     @inlinable
-    static postfix func ~ (_ lhs: consuming Self) -> Wrapped { lhs ?? Wrapped.DV }
-    
-    @inlinable
-    static func ~~ (lhs: consuming Any?, rhs: borrowing Wrapped.Type) -> Wrapped { (lhs as? Wrapped)~ }
+    static postfix func ~ (_ lhs: Self) -> Wrapped { lhs ?? Wrapped.DV }
 }
 
 public extension Any? {
     static postfix func ~ <T: Defaultable>(_ lhs: Self) -> T { (lhs as? T)~ }
+
+    static func ~~ <T: Defaultable>(lhs: Any?, rhs: T.Type) -> T { (lhs as? T)~ }
 }
 
 extension Optional: Defaultable where Wrapped: Defaultable {
