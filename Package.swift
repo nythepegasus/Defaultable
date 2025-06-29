@@ -8,6 +8,11 @@ let package = Package(
         .library(name: "Defaultable", targets: ["Defaultable"]),
         .library(name: "DefaultableFoundation", targets: ["DefaultableFoundation"])
     ],
+    traits: [
+        "DFNumerics",
+        "DFURL",
+        .default(enabledTraits: ["DFNumerics"]),
+    ],
     targets: [
         .target(name: "Defaultable"),
         .target(name: "DefaultableFoundation", dependencies: ["Defaultable"]),

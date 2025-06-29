@@ -9,6 +9,8 @@ import Foundation
 
 @_exported import Defaultable
 
+#if DFNumerics
+
 extension UInt: Defaultable {
     public static var DV: UInt { 0 }
 }
@@ -61,15 +63,21 @@ extension Float: Defaultable {
     public static var DV: Float { 0.0 }
 }
 
+#endif
+
 // Possibly TODO: `NumberFormatter`
 
 extension Data: Defaultable {
     public static var DV: Data { Data() }
 }
 
+#if DFURL
+
 extension URL: Defaultable {
     public static var DV: URL { URL(string: "https://nythepegas.us")! }
 }
+
+#endif
 
 extension String: Defaultable {
     public static var DV: String { "" }
