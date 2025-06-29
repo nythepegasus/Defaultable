@@ -7,10 +7,46 @@
 
 import Foundation
 
-import Defaultable
+@_exported import Defaultable
+
+extension UInt: Defaultable {
+    public static var DV: UInt { 0 }
+}
 
 extension Int: Defaultable {
     public static var DV: Int { 0 }
+}
+
+extension UInt64: Defaultable {
+    public static var DV: UInt64 { 0 }
+}
+
+extension UInt32: Defaultable {
+    public static var DV: UInt32 { 0 }
+}
+
+extension UInt16: Defaultable {
+    public static var DV: UInt16 { 0 }
+}
+
+extension UInt8: Defaultable {
+    public static var DV: UInt8 { 0 }
+}
+
+extension Int64: Defaultable {
+    public static var DV: Int64 { 0 }
+}
+
+extension Int32: Defaultable {
+    public static var DV: Int32 { 0 }
+}
+
+extension Int16: Defaultable {
+    public static var DV: Int16 { 0 }
+}
+
+extension Int8: Defaultable {
+    public static var DV: Int8 { 0 }
 }
 
 extension Double: Defaultable {
