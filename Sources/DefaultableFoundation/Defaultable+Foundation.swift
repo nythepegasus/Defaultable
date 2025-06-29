@@ -123,72 +123,72 @@ public extension Bundle {
     
     func object<T: Defaultable>(for key: String) -> T { object(forInfoDictionaryKey: key)~ }
     
-    func object<T: Defaultable>(for key: Keys) -> T { object<T>(for: key.rawValue) }
+    func object<T: Defaultable>(for key: Keys) -> T { object(for: key.rawValue) }
     
     func keyExists(_ key: String) -> Bool { object(forInfoDictionaryKey: key) != nil }
     
     func keyExists(_ key: Keys) -> Bool { keyExists(key.rawValue) }
     
     // MARK: - Var accesses for each key
-    var appCategoryType: String { object<String>(for: .appCategoryType) }
+    var appCategoryType: String { object(for: .appCategoryType) }
     
-    var packageType: String { object<String>(for: .packageType) }
+    var packageType: String { object(for: .packageType) }
     
-    var identifier: String { object<String>(for: .identifier) }
+    var identifier: String { object(for: .identifier) }
     
-    var wkIdentifier: String { object<String>(for: .wkidentifier) }
+    var wkIdentifier: String { object(for: .wkidentifier) }
     
-    var wkCompanionIdentifier: String { object<String>(for: .wkCompanionIdentifier) }
+    var wkCompanionIdentifier: String { object(for: .wkCompanionIdentifier) }
     
-    var name: String { object<String>(for: .name) }
+    var name: String { object(for: .name) }
     
-    var displayName: String { object<String>(for: .displayName) }
+    var displayName: String { object(for: .displayName) }
     
-    var spokenName: String { object<String>(for: .spokenName) }
+    var spokenName: String { object(for: .spokenName) }
     
-    var version: String { object<String>(for: .version) }
+    var version: String { object(for: .version) }
     
-    var shortVersion: String { object<String>(for: .shortVersion) }
+    var shortVersion: String { object(for: .shortVersion) }
     
-    var infoVersion: String { object<String>(for: .infoVersion) }
+    var infoVersion: String { object(for: .infoVersion) }
     
-    var copyright: String { object<String>(for: .copyright) }
+    var copyright: String { object(for: .copyright) }
     
-    var minimumMacOSVersion: String { object<String>(for: .minimumMacOSVersion) }
+    var minimumMacOSVersion: String { object(for: .minimumMacOSVersion) }
     
-    var minimumMacOSVersionByArchitecture: String { object<String>(for: .minimumMacOSVersionByArchitecture) }
+    var minimumMacOSVersionByArchitecture: String { object(for: .minimumMacOSVersionByArchitecture) }
     
-    var minimumOSVersion: String { object<String>(for: .minimumOSVersion) }
+    var minimumOSVersion: String { object(for: .minimumOSVersion) }
     
-    var requiresiOS: Bool { object<Bool>(for: .requiresiOS) }
+    var requiresiOS: Bool { object(for: .requiresiOS) }
     
-    var watchKitApp: Bool { object<Bool>(for: .watchKitApp) }
+    var watchKitApp: Bool { object(for: .watchKitApp) }
     
-    var watchKitAppIndependent: Bool { object<Bool>(for: .watchKitAppIndependent) }
+    var watchKitAppIndependent: Bool { object(for: .watchKitAppIndependent) }
     
-    var watchKitAppOnly: Bool { object<Bool>(for: .watchKitAppOnly) }
+    var watchKitAppOnly: Bool { object(for: .watchKitAppOnly) }
     
-    var watchKitDelegate: String { object<String>(for: .watchKitDelegate) }
+    var watchKitDelegate: String { object(for: .watchKitDelegate) }
     
-    var newWK: String { object<String>(for: .newWK) }
+    var newWK: String { object(for: .newWK) }
     
-    var requiredDeviceCapabilities: [String] { object<[String]>(for: .requiredDeviceCapabilities) }
+    var requiredDeviceCapabilities: [String] { object(for: .requiredDeviceCapabilities) }
     
-    var multipleInstancesProhibited: Bool { object<Bool>(for: .multipleInstancesProhibited) }
+    var multipleInstancesProhibited: Bool { object(for: .multipleInstancesProhibited) }
     
-    var backgroundModes: [String] { object<[String]>(for: .backgroundModes) }
+    var backgroundModes: [String] { object(for: .backgroundModes) }
     
-    var requiresMacCatalyst: Bool { object<Bool>(for: .requiresMacCatalyst) }
+    var requiresMacCatalyst: Bool { object(for: .requiresMacCatalyst) }
     
-    var requirestvOS: Bool { object<Bool>(for: .requirestvOS) }
+    var requirestvOS: Bool { object(for: .requirestvOS) }
     
-    var requiresPersistentWiFi: Bool { object<Bool>(for: .requiresPersistentWiFi) }
+    var requiresPersistentWiFi: Bool { object(for: .requiresPersistentWiFi) }
     
-    var supportsFileSharing: Bool { object<Bool>(for: .supportsFileSharing) }
+    var supportsFileSharing: Bool { object(for: .supportsFileSharing) }
     
-    var supportsDocumentsInPlace: Bool { object<Bool>(for: .supportsDocumentsInPlace) }
+    var supportsDocumentsInPlace: Bool { object(for: .supportsDocumentsInPlace) }
     
-    var supportsDocumentsBrowser: Bool { object<Bool>(for: .supportsDocumentsBrowser) }
+    var supportsDocumentsBrowser: Bool { object(for: .supportsDocumentsBrowser) }
 }
 
 #endif
