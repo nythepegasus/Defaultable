@@ -83,7 +83,7 @@ struct DefaultableSanityTests {
     func nilStruct() async throws {
         let u: User? = nil
         #expect(u == nil)
-        #expect(u~ == .DV)
+        #expect(u~ == User.DV)
         #expect("" == u~.name~)
         #expect(0 == u~.age~)
     }
@@ -92,9 +92,9 @@ struct DefaultableSanityTests {
     func nilNestedStruct() async throws {
         let p: Post? = nil
         #expect(p == nil)
-        #expect(p~ == .DV)
-        #expect(p~.title~ == .DV)
-        #expect(p~.author~ == .DV)
+        #expect(p~ == Post.DV)
+        #expect(p~.title~ == String.DV)
+        #expect(p~.author~ == String.DV)
     }
     
     @Test("ascii bytes")

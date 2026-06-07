@@ -2,7 +2,6 @@
 // MARK: Custom Operators
 
 postfix operator ~
-infix operator ~~: AssignmentPrecedence
 
 // MARK: Protocol Declaration
 
@@ -19,9 +18,10 @@ public extension Optional where Wrapped: Defaultable {
 }
 
 public extension Any? {
-    static postfix func ~ <T: Defaultable>(_ lhs: Self) -> T { (lhs as? T)~ }
-
-    static func ~~ <T: Defaultable>(lhs: Any?, rhs: T.Type) -> T { (lhs as? T)~ }
+    @inlinable
+    static postfix func ~ <T>(_ lhs: Self) -> T? { (lhs as? T) }
+    @inlinable
+    static postfix func ~ <T: Defaultable>(_ lhs: Self) -> T { (lhs as? T) ?? T.DV }
 }
 
 extension Optional: Defaultable where Wrapped: Defaultable {
