@@ -39,3 +39,12 @@ extension EmptyCollection: Defaultable {
 extension Array: Defaultable {
     public static var DV: Array<Element> { [] }
 }
+
+extension Dictionary: Defaultable {
+    public static var DV: Dictionary<Key, Value> { [:] }
+}
+
+extension Set: Defaultable {
+    public static var DV: Set<Element> { [] }
+}
+
